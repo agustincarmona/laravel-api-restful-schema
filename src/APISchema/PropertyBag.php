@@ -1,6 +1,5 @@
 <?php namespace APISchema;
 
-use Eslife\Common\ArrayObject;
 use Illuminate\Database\Eloquent\Model;
 
 trait PropertyBag {

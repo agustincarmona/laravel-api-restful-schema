@@ -46,9 +46,12 @@ trait PropertyBagValidate {
     public function getAllValidators() {
         $result = [];
         $validators = $this->getValidator();
-        foreach($validators as $key => &$value) {
-            if (is_string($value) && class_exists($value)) {
-                $result[$key] = new $value();
+
+        if (!empty($validators)) {
+            foreach($validators as $key => &$value) {
+                if (is_string($value) && class_exists($value)) {
+                    $result[$key] = new $value();
+                }
             }
         }
 

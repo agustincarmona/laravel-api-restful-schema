@@ -1,5 +1,7 @@
 <?php namespace APISchema\Http\Traits;
 
+use Illuminate\Support\Facades\Request;
+
 trait SchemeTraitController {
 
     public function callAction($method, $parameters) {
@@ -35,12 +37,10 @@ trait SchemeTraitController {
         if (isset($commentParsed['input'])) {
             $input = $commentParsed['input'][0];
             $input = new $input();
-            $inputScheme = ['schema' => $input->getDefaults(),
+            $result = ['schema' => $input->getDefaults(),
                             'validations' => $input->getAllValidators(),
                             'help' => $input->getHelp()
             ];
-            $this->result->setData($inputScheme);
-            $result = $this->result->getResponseJSON();
         }
 
         return $result;
