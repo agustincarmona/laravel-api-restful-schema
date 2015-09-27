@@ -1,0 +1,21 @@
+{
+  "name": "agustincarmona/laravel-api-schema",
+  "description": "Publish schema, for each public method of API controllers",
+  "license": "MIT",
+  "keywords": ["restful", "laravel", "api", "controller", "schema"],
+  "authors": [
+    {
+      "name": "Agustín Carmona",
+      "email": "agustin.carmona@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "APISchema\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "laravel/framework": "4.*"
+  }
+}
