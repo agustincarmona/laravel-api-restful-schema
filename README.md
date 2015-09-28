@@ -12,12 +12,9 @@ Ahora imaginar que podéis construir los modelos dinámicamente sólo consultand
 **Cómo se usa**
 
 Añadir el trait APISchema\Http\Traits\SchemeTraitController en tú controlador.
-{{{
-
+```php
 class MyController extends Controller {
   use APISchema\Http\Traits\SchemeTraitController;
 
 }
-
-}}}
-
+```
