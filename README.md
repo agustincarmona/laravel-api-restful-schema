@@ -8,6 +8,9 @@ Ahora imaginar que podéis construir los modelos dinámicamente sólo consultand
 
 **Instalación**
 
+```
+$ composer require "agustincarmona/laravel-api-schema"
+```
 
 **Cómo se usa**
 
