@@ -18,3 +18,48 @@ class MyController extends Controller {
 
 }
 ```
+
+Crear una clase con los parámetros de entrada de cada acción del controlador.
+
+```php
+class formInput extends InputModel {
+
+  /**
+  * Sample parameter 1
+  * @var int
+  **/
+  public $id;
+
+  /**
+  * Sample parameter 2
+  * @var string
+  **/
+  public $name;
+  
+    /**
+     * @see \Validator
+     * @return array
+     */
+    public function getValidator() {
+        return [];
+    }  
+
+}
+
+```
+
+En cada acción del controlador añadir un comentario para definir la clase que contiene la definición de los datos de entrada del método.
+
+```php
+
+    /**
+     * @input formInput
+     * @return mixed
+     */
+	public function postIndex()
+	{
+		return View::make('form');
+	}
+
+```
+
